@@ -1,0 +1,51 @@
+{
+  "name": "calenthor-client",
+  "version": "1.0.0",
+  "description": "Calenthor client for MERO",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src --ext .js,.ts",
+    "lint:fix": "eslint src --fix --ext .js,.ts",
+    "postversion": "git push && git push --tags",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "size": "size-limit",
+    "test": "jest --coverage --config jest.config.js",
+    "version": "npm run format && git add -A src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TPN-Labs/Calenthor_Client.git"
+  },
+  "keywords": [
+    "keez",
+    "node",
+    "typescript"
+  ],
+  "author": "Mihai-Alexandru Matraguna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TPN-Labs/Calenthor_Client/issues"
+  },
+  "homepage": "https://github.com/TPN-Labs/Calenthor_Client#readme",
+  "devDependencies": {
+    "@types/jest": "29.5.12",
+    "@typescript-eslint/eslint-plugin": "6.19.1",
+    "@typescript-eslint/parser": "7.1.0",
+    "calenthor-lib": "1.0.0",
+    "eslint": "8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jest": "27.9.0",
+    "jest": "29.7.0",
+    "nock": "^13.3.0",
+    "ts-jest": "29.1.2",
+    "typescript": "5.3.3",
+    "winston": "^3.8.2"
+  },
+  "files": [
+    "dist/**/*"
+  ]
+}
